@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 10</title>
+    <!--Create text box and a span tag , on change it should give error if user keeps text box empty.-->
+</head>
+<body>
+    <input type="text" onchange="myfunc()" id="name">
+
+    <span id="demo"></span>
+    <script>
+        function myfunc()
+        {
+            var x= document.getElementById("name").value;
+            if(x.length=="")
+            {
+                alert("Please Enter text!!!");
+                return false;
+            }
+            document.getElementById("demo").innerHTML=x;
+        }
+    </script>
+</body>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ASSIGNMENT 1</title>
+       <!--  Create class Employee which has instance member id, name , salary, net salary. 
+        Also Write getter setter for each instance member.
+        Write calculate net salary function whose job is to calculate net salary after deduction of 10 % TDS. 
+        Create 2 objects of the class and call method.-->
+    </head>
+    <body>
+        <script>
+            class Employee
+            {
+                constructor(id,name,sal)
+                {
+                    this.id=id;
+                    this.name=name;
+                    this.salary=sal;
+                    this.netsalary=null;
+                }
+                set set_id(i1)
+                {
+                    this.id=i1;
+                }
+                set set_name(n1)
+                {
+                    this.name=n1;
+                }
+                set setsal(s1)
+                {
+                    this.salary=s1;
+                }
+                get get_id()
+                {
+                    return this.id;
+                }
+                get get_name()
+                {
+                    return this.name;
+                
+                }
+                get get_sal()
+                {
+                    return this.salary;
+                }
+                get net_sal()
+                {
+                    return this.netsalary;
+                }
+                calculatenetsalary()
+                {
+                    let TDS = 0.1;
+                    this.netsalary = this.salary - (TDS*this.salary);
+            
+                }
+                display()
+                {
+                    document.write("-------Employee Details--------<br/>");
+                    document.write("ID: "+this.id);
+                    document.write("<br/>Name: "+this.name);
+                    document.write("<br/>Salary: "+this.salary);
+                    document.write("<br/>Net Salary: "+this.netsalary+"<br/><br/>");
+                }
+
+            }
+            e1 = new Employee(1,"charu",90000);
+            e2 = new Employee(2,"swati",80000);
+            e1.setsalary = 25000;
+            e1.calculatenetsalary();
+            e1.display();
+            e2.calculatenetsalary();
+            e2.display();
+           
+        </script>
+    </body>
+</html>

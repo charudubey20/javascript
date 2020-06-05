@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    
+        <p id="cb"></p>
+        <p id="sqr"></p>
+        <script>
+            class Math
+       {
+           static square(x)
+           {
+               return x*x;
+           }
+           static cube(x)
+           {
+               return x*x*x;
+           }
+       }
+       document.getElementById("cb").innerHTML ="<b>Cube of 6 is:</b>"+ Math.cube(6);
+document.getElementById("sqr").innerHTML ="<b>Square of 6 is:</b>"+ Math.square(6);
+        </script>
+    </body>
+</html>

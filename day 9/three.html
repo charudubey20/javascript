@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <title>Assignment 3</title>
+    <!-- write a function sum with no parameters but it will do the sum of numbers
+        passed in function call eg. sum(2,3,,5), sum(2,4). So your definition will 
+        work irrespective of the number of parameters passed.--> 
+    <body>
+        
+        <h3>SUM IS:</h3>
+        <p id="demo"></p>
+        <script>
+        function sum()
+        {
+            var sum=0;
+            for(var i=0;i<arguments.length;i++)
+            {
+                sum=sum+arguments[i];
+            }
+            return sum;
+        }
+    
+        document.getElementById("demo").innerHTML = sum(1,3,5,7,9);
+        </script>
+    </body>
+</html>

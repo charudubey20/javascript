@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 7</title>
+    <!--Write at least 3 paragraph about yourself. Create a button on click it should count number of p 
+    tags used in document. Also give blue background colour to all p tags.-->
+   </head>
+   <body>
+    <p id = "one">My name is Charu Dubey. I am from Bhopal.></p>
+    <p id = "two">I have done engineering from Information Technology.</p>
+    <p id = "three">Currently I am persuing cdac from Mumbai.</p>
+    <p id = "four">My hobbies are dancing,sleeping,travelling,playing kho-kho</p>
+    <br><br>
+    <button onclick="myfunc()">click here</button>
+
+    <script>
+        function myfunc()
+        {
+            var len = document.getElementsByTagName("p").length;
+            for (let i=0;i<len;i++)
+            {
+                document.getElementsByTagName("p")[i].style.color="blue";
+            }
+        }
+
+    </script>
+</body>
+</html>
+

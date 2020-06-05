@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 2</title>
+        <!-- write a self invoking function whose job is to return square of a number -->
+
+    </head>
+    <body>
+        <input type="text" id="num">
+        <button type ="button" onclick ="display()">click here</button>
+        <p id = "demo"></p>
+        <script>
+            function display()
+            {
+           var x=parseInt(document.getElementById("num").value)
+           {
+            
+            (function(y){
+             document.getElementById("demo").innerHTML=y*y;
+              })(x);
+           }
+            }
+        
+        </script>
+    </body>
+</html>

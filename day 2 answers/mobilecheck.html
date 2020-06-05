@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h3>valid mobile number</h3>
+<p>Click the button to check</p>
+
+<button onclick="phonenumber()">click here</button>
+
+<p id="org"></p>
+<p id="try"></p>
+
+<script>
+    var txt="655897867"
+    document.getElementById("org").innerHTML=txt;
+if(document.getElementById("try").innerHTML=txt.length==10)
+{
+    document.getElementById("try").innerHTML="valid";
+}
+else{
+    document.getElementById("try").innerHTML="not-valid";
+}
+
+</script>
+
+</body>
+</html>

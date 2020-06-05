@@ -1,0 +1,32 @@
+<!--Create a paragraph, write 5 line about you. on mouse over hide
+     paragraph and on mouse out show paragraph-->
+
+     <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+</head>
+<body>
+    <p>My name is Charu Dubey. </p>
+    <p>I am from Bhopal.</p>
+    <p>I like to exlpore different places.</p>
+    <p>Currently I am doing cdac from VITA</p>
+    <p>My hobbies are playing kho-kho and reading novels.</p>
+    <script>
+    $(document).ready(function()
+    {
+    $("p").mouseover(function() 
+    {
+         $(this).hide();
+    });
+    $("p").mouseout(function()
+            {
+                $(this).show();
+            });
+    });
+    </script>
+    </body>
+    </html>

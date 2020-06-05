@@ -1,0 +1,23 @@
+<!--create image ana button onbutton click hide the image-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+</head>
+<body>
+    <button type="button">Click Here</button>
+    <img src="charu.jpg" id="img" style="width: 300px;" style="align-items: center;">
+    <script>
+    $(document).ready(function()
+    {
+        $("button").click(function()
+        {
+            $("#img").hide();
+        });
+    });
+    </script>
+</body>
+</html>

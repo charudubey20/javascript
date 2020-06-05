@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p id="name" >Click me to see my name</p>
+<button onclick="myName()">CLICK ME</button>
+
+<p id="dates" >Click me to see date</p>
+<button type="button"
+onclick="document.getElementById('dates').innerHTML =Date()">
+Click me to display Date</button>
+
+<p id="size">CHARU DUBEY</p>
+<button type="button" onclick="changefont()">change font size</button></br></br>
+
+<h2 id="hidd" style="display:none">CHARU</h2>
+<button type="button" onclick='document.getElementById("hidd").style="display:block" '>Click to show hidden name</button>
+ 
+
+<script>
+    
+function myName() {
+
+  document.write("charu")
+}
+function changefont() {
+
+
+ var str= document.getElementById("size").innerHTML;
+ var res= str.fontsize(7);
+ document.getElementById("size").innerHTML=res;
+
+}
+
+</script>
+
+
+
+</body>
+</html>

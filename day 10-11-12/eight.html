@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 8</title>
+    <!--Write your friends name using OL tag. Create a button whose job is to delete the 1st 
+    name from the OL tag.-->
+</head>
+<body>
+    <ol>
+        <li id="frnds">Neha</li>
+        <li>Swati</li>
+        <li>Rupal</li>
+        <li>Jassi</li>
+    </ol>
+    <br>
+    <button onclick="myfunc()">Click here</button>
+    <script>
+        function myfunc()
+        {
+            var list = document.getElementById("frnds");
+            list.parentNode.removeChild(list);
+        }
+    </script>
+</body>

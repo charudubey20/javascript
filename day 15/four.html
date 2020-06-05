@@ -1,0 +1,23 @@
+<!-- Create a text box, on blur give grey color to textbox-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+</head>
+<body>
+    ENTER NAME:<input type="text" id="txt">
+    <script>
+        $(document).ready(function()
+        {
+        $("#txt").blur(function()
+        {
+            $(this).css("background-color", "grey");
+        });
+        });
+    </script>
+</body>
+</html>

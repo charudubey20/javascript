@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>DIGITAL CLOCK</title>
+    <!-- Write a program to display a digital clock-->
+    <style>
+      h1{
+          text-align: center;
+
+       }
+        </style>
+</head>
+<body>
+    <h1 >Digital Clock</h1>
+            <h1 id="time"></h1>
+    <script>
+        window.setInterval(digitalclock,1000);
+        function digitalclock()
+        {
+            var d= new Date();
+            document.getElementById("time").innerHTML = d.getHours()+":"+d.getMinutes()+":" + d.getSeconds();
+    
+        }
+    </script>
+</body>
+
+</html>

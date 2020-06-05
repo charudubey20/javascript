@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+    
+    h1 {text-align: center;
+    }
+    body  {
+        background-image: linear-gradient(to right, white, pink, violet, hotpink, blueviolet);
+
+     }
+     input[type=text], input[type=password] {
+
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 2px solid red;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+     input[type=submit]{
+         background-color:cyan;
+         color: rgb(10, 10, 10);
+                padding: 16px 32px;
+                text-decoration: rgba(11, 82, 235, 0.904);
+                margin: 4px 2px;
+     }
+     span{
+                color: rgb(5, 5, 5);
+                font-size: medium;
+                font-weight: bold;
+                font-family:'Times New Roman';
+        
+            }
+            
+</style>
+</head>
+
+    <body>
+        <div style="color: black ; text-align: center; font-family: 'Times New Roman'; font-weight: bold;font-style: normal; font-size: medium;">
+    <h1 style="color:greenyellow; text-shadow: 2px 2px tomato; outline-style: groove;">ENTER THE DETAILS</h1>
+      <form text-align="center" onsubmit = "return valid()">
+        <fieldset>
+            USER-ID:<br><input type ="text" id="user" ><br>
+            <span id="1"></span><br>
+            PASSWORD:<br><input type ="password" id="pass"><br>
+            <span id="2"></span><br>
+            MOBILE NO.:<br><input type="text" id="mob"><br>
+           <span id="3"></span><br>
+            ADDRESS:<br><input type="text" id="add"><br>
+            <span id="4"></span><br>
+           AGE:<br><input type="text" id="age"><br>
+           <span id="5"></span><br>
+           <input type="submit" id="sub" value="submit"><br>
+        </fieldset>
+    </form>
+</div>
+<script>
+             function valid(){
+                var user=document.getElementById("user").value;
+                var pass=document.getElementById("pass").value;
+                var mob=document.getElementById("mob").value;
+                var add=document.getElementById("add").value;
+                var age=document.getElementById("age").value;
+
+                if(user=="")
+                {
+                   document.getElementById("1").innerHTML="*All fields are mandatory";
+                   return false;
+                }
+                if((user.length<3) || (user.length>15))
+                {
+                    document.getElementById("1").innerHTML=" *User-Id must be between 3 and 15 characters";
+         return false;
+                }
+                if(pass=="")
+                {
+                    document.getElementById("2").innerHTML="*All fields are mandatory";
+                   return false;
+                }
+                if(pass.length<=8)
+             {
+         document.getElementById("2").innerHTML=" *Password should be of minimum 8 characters";
+         return false;
+             }
+             if(mob=="")
+             {
+                document.getElementById("3").innerHTML="*All fields are mandatory";
+                   return false;
+             }
+             if(isNaN(mob))
+             {
+                document.getElementById("3").innerHTML="Mobile should contain only numbers";
+                   return false; 
+             }
+             if(mob.length!=10)
+             {
+                document.getElementById("3").innerHTML="should contain 10 numbers";
+                   return false;
+             }
+             if(add=="")
+             {
+         document.getElementById("4").innerHTML=" **All fields are mandatory";
+         return false;
+             }
+         if(age=="")
+             {
+         document.getElementById("5").innerHTML=" *All fields are mandatory";
+         return false;
+             }
+             if((age<=18) ||(age>=100))
+             {
+         document.getElementById("5").innerHTML="Age must be between 18 to 100";
+         return false;
+             }
+            
+     
+             }
+
+</script>
+
+    </body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 2</title>
+        <!-- Create class student which has instance member roll number, name, marks1,marks2,marks3, total, percentage.
+             Write getter setter for roll number, name and marks1,marks2,marks3.
+             Write a method to calculate total and  percentage.-->
+    </head>
+    <body>
+    
+        <script>
+            class Student
+            {
+                constructor(roll,name,m1,m2,m3)
+                {
+                    this.rollnumber = roll;
+                        this.name = name;
+                        this.marks1 = m1;
+                        this.marks2 = m2;
+                        this.marks3 = m3;
+                        this.total = null;
+                        this.percentage = null;
+                }
+                get getroll()
+                {
+                    return this.rollnumber;
+                }
+                get getname()
+                {
+                    return this.name;
+                }
+                get getmarks1()
+                {
+                   return this.marks1;
+                }
+                get getmarks2()
+                {
+                    return this.marks2;
+                }
+                get getmarks3()
+                {
+                    return this.marks3;
+                }
+                set setroll(r1)
+                {
+                    
+                        this.rollNumber =r1;
+                }
+
+                set setname(n1)
+                {
+                    this.name=n1;
+                }
+                    
+
+                set setmarks1(m1)
+                {
+                    
+                        this.marks1 = m1;
+                    
+                }
+
+                set setmarks2(m2)
+                {
+                  this.marks2 = tm2;
+                }
+
+                set setmarks3(m3)
+                {
+                    this.marks1 = m3;
+                }
+
+                calculatetotalmarks()
+                {
+                    this.total = this.marks1 + this.marks2 + this.marks3;
+                }
+                calculatepercentage()
+                {
+                  this.percentage  = (this.total/300)*100;
+                    
+                }
+                display()
+                {
+                    document.write("-------Student Details-----");
+                    document.write("<br/>Roll Number: "+this.rollnumber);
+                    document.write("<br/>Name: "+this.name);
+                    document.write("<br/>Marks 1: "+this.marks1);
+                    document.write("<br/>Marks 2: "+this.marks2);
+                    document.write("<br/>Marks 3: "+this.marks3);
+                    document.write("<br/>Total Marks: "+this.total);
+                    document.write("<br/>Percentage: "+this.percentage+"%<br/><br/>");
+                }
+            }
+            s1 = new Student(1,"swati",99,98,100);
+            s1.calculatetotalmarks();
+            s1.calculatepercentage();
+            s1.display();
+
+            s2 = new Student(2,"charu",98,97,96);
+            s2.calculatetotalmarks();
+            s2.calculatepercentage();
+            s2.display();
+            
+        </script>
+    </body>
+</html>
+
