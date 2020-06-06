@@ -1,0 +1,35 @@
+<!--Create two text boxes and a button, on click it should copy data from one text box to another-->
+
+<!DOCTYPE html>
+<html lang>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <center>
+   Enter name: <input type="text" name="nm" id="txt1">
+   <br> <br>
+   Copy Here:<input type="text" name= "cd" id = "txt2">
+   <br> <br>
+   <button>Click Here to Copy</button>
+</center>
+<script>
+    $(document).ready(function()
+    {
+        $("button").click(function()
+        {
+            var txt1= $("#txt1").val();
+   $("#txt2").val(txt1);
+
+        });
+    });
+    
+
+</script>
+
+</body>
+</html>

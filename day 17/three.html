@@ -1,0 +1,37 @@
+<!--create a list of fruits and a radio buttons showing fruits name, whichever radio is clicked
+that fruit name should be added to the list-->
+<!DOCTYPE html>
+<html lang>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(":radio").click(function(){
+  var x= $("input[name='fruit']:checked").val();
+    $("ol").append(x);
+});
+});
+
+
+</script>
+</head>
+<body>
+    <h3 style="color: darkred;">Select the fruit you want to add in the list</h3>
+    Orange<input type="radio" name="fruit" value="<li>Orange</li>"><br>
+    Banana<input type="radio" name="fruit" value="<li>Banana</li>"><br>
+    Grapes<input type="radio" name="fruit" value="<li>Grapes</li>"><br>
+    Cherry<input type="radio" name="fruit" value="<li>Cherry</li>"><br>
+
+    <ol>
+        <li>Mango</li>
+        <li>Strawberry</li>
+        <li>Pine Apple</li>
+    </ol>
+
+
+
+</body>
+</html>
