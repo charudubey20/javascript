@@ -1,0 +1,28 @@
+<!--Type your name in h1 tag when you put mouse over it your name should be fade out-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <center>
+        <h1 style="color:tomato" id="h1">Charu Dubey</h1>    
+    </center>
+
+    <script>
+        $(document).ready(function()
+        {
+            $("#h1").mouseover(function()
+            {
+                $(this).fadeOut("slow");
+            });
+        });
+    </script>
+</body>
+</html>

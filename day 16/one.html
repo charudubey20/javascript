@@ -1,0 +1,26 @@
+<!-- Create a button,  on click it should display image and if you click again it should hide image.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+        <img src="cd.jpg" style="width: 400px; height: 200px;" id="img">
+        <button>Click Here</button>
+
+    <script>
+        $(document).ready(function()
+        {
+            $("button").click(function()
+            {
+               $("img").toggle();
+            });
+           
+        });
+    </script>
+    </body>
+    </html>

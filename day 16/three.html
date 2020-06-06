@@ -1,0 +1,31 @@
+<!--Create a button on button click your name which is written in h3 tag will slide up and 
+    then it will slide down.-->
+
+
+<!DOCTYPE html>
+<html lang>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body style="background-color: tomato;"
+    <br><br><br>
+    <center>
+        <button>click Here</button>
+        <h3 id="h3" style="color: black">Charu Dubey</h3>
+    </center>
+
+    <script>
+        $(document).ready(function()
+        {
+            $("button").click(function()
+            {
+                $("h3").slideToggle("slow");
+            });
+        });
+    </script>
+</body>
+</html>

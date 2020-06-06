@@ -1,0 +1,33 @@
+<!--Create a paragraph on button click it should hide once hidden it should display message done with hiding.-->
+
+<!DOCTYPE html>
+<html lang>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    
+    <center>
+        <p style="color: tomato;">
+        Earth is like our home and we must make efforts to keep it clean and green.</p>
+        <button>Click to hide</button>
+    </center>
+
+    <script>
+        $(document).ready(function()
+        {
+            $("button").click(function()
+            
+            {
+                $("p").hide();
+                alert("Done with Hiding!");
+                
+            });
+        });
+    </script>
+</body>
+</html>
