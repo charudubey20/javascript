@@ -1,0 +1,36 @@
+<html>
+<body>
+    <button type="button" onclick="clearInterval(myVar)">stop</button>
+    <img id="myImage" src="a1.jpg">
+    <button onclick ="myVar=setInterval(myTimer, 1000)">start</button>
+   
+    
+   
+    <script>
+        var pic = ['a1.jpg', 'a2.png', 'a3.jpg','a4.jpg'];
+        var imageno = 0;
+        
+        var myVar = setInterval(myTimer, 1000);
+        
+        function myTimer() {
+            
+           
+            imageno = (imageno + 1) 
+            if(imageno==4)
+            {
+                imageno=0;
+                
+            }
+        
+            
+            document.getElementById("myImage").src = pic[imageno];
+            
+            
+            
+            
+
+        }
+        
+    </script>
+</body>
+</html>

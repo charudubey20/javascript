@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Calculator</h2>
+
+
+
+<form>
+ 
+  <label>enter number 1:</label><br>
+  <input type="number" id="no1" > <br><br>
+  <label>Choose a operator:</label>
+  <select id="op" name="operator" size="1">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/"> /</option>
+     <option value="%"> %</option> 
+	 </select><br><br>
+  <label>enter number 2:</label><br>
+  <input type="number" id="no2" > <br><br>
+  <button type="button" onclick="calculator()">submit</button>
+  
+</form>
+<p id ="demo1"></p>
+<script>
+function calculator()
+{
+let a=Number(document.getElementById("no1").value)
+let b=Number(document.getElementById("no2").value)
+let c=document.getElementById("op").value
+if(c=="+")
+{
+
+document.getElementById("demo1").innerHTML= "The result is " + (a+ b);
+
+}
+if(c=="-")
+{
+document.getElementById("demo1").innerHTML= "The result is " + (a- b);
+
+}
+if(c=="*")
+{
+document.getElementById("demo1").innerHTML= "The result is " + a* b;
+
+}
+if(c=="/")
+{
+document.getElementById("demo1").innerHTML= "The result is " + a/ b;
+
+}
+if(c=="%")
+{
+document.getElementById("demo1").innerHTML= "The result is " + a% b;
+
+}
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div class="section">
+<form name="myForm" action="validform.html" onsubmit="return validateForm()" method="post">
+ <label><h1> Application Form</h1></label>
+ 
+ Name:<input type="text" id="fname" name="fname"  required ><br><br>
+ 
+ Age:<input type="number" id="age" name="age" required><br><br>
+ 
+  Mobileno:<input type="text" id="mobno" name="mobno"  maxlength="10" required><br><br>
+ 
+  Email id:<input type="text" id="email" name="email"   required><br><br>
+ 
+ <input type="submit" value="Submit">
+
+</form>
+ </div>
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<script>
+function validateForm() {
+let a= document.getElementById("fname").value;
+  let m=document.getElementById("mobno").value;
+  let d = document.getElementById("age").value;
+   let e = document.getElementById("email").value;
+   if(!/^[A-Za-z]/.test(a))
+   {
+   alert(" Name cannot contain numbers")
+   return false;
+   }
+   
+   else if(!(/^[0-9]{10}/.test(m)))
+  {
+  alert(" invalid mobile number")
+  return false;
+ 
+   }
+   
+  else if (!(/@/.test(e))) {
+    alert(" invalid email id") 
+  return false;
+}else{
+return true;
+}
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+    <button id="frwd" type="button">forward</button>
+	<img id="myImage" src="a1.jpg">
+    <button id="bck" type="button">back</button>
+    
+    <script>
+        let pic = ['a1.jpg', 'a2.png', 'a3.jpg','a4.jpg'];
+        let imageno = 0;
+        document.getElementById("frwd").addEventListener('click', forward);
+        document.getElementById("bck").addEventListener('click', back);
+        function forward() {
+            imageno = (imageno + 1) ;
+            document.getElementById("myImage").src = pic[imageno];
+        }
+        function back() {
+            imageno = (imageno - 1) ;
+            document.getElementById("myImage").src = pic[imageno];
+        }
+    </script>
+</body>
+</html>

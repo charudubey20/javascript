@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Time</p>
+
+<input type="txt" id="name"/>
+<button type="button" onclick= "showtime()">click here</button>
+<p id= "demo"></p>
+<script>
+function showtime()
+{
+   var x= document.getElementById("name").value
+   var y= new Date()
+ if( y.getHours()<12)
+ {
+ document.getElementById("demo").innerHTML = "Good Morning" + x;
+ }
+ else if((y.getHours()== 12 && y.getMinutes() >0 )||y.getHours()<15)
+  {
+ document.getElementById("demo").innerHTML = "Good Afternoon" + x;
+ }
+ else if(y.getHours()>=15 || y.getMinutes()>0)
+ {
+ document.getElementById("demo").innerHTML = "Good Evening" + x;
+ }
+ }
+ </script>
+ </body>
+ </html>
