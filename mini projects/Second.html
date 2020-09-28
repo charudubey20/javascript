@@ -1,46 +1,47 @@
-!DOCTYPE html>
-<html>
-<body>
+<!-- Generate Timer program using JavaScript where Time is decrementing from 5 mins to 0 seconds.
+     As soon as it reaches to zero seconds we should get one alert message with message “Time out!”-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Countdown</title>
+    <style>
+    
+            body{
+            background-color:teal ;
+            text-align: center;
 
-<h2>Personal Details</h2>
-<p id ="demo"></p>
-
-
-<form name="myForm" action="submit.html" onsubmit="return validateForm()" method="post">
- 
-  <label>First name:</label><br>
-  <input type="text" id="fname" name="fname" required> <br><br>
-  <label>Date of birth:</label><br>
-  <input type="date" id="date" name="date" required><br>
-  <label>Gender:</label><br>
-  <input type="radio" id="male" name="gender" value="male">
-  <label>Male</label><br>
-  <input type="radio" id="female" name="gender" value="female">
-  <label>Female</label><br>
-  <label>Address:</label><br>
-  <textarea name="address" rows="10" cols="30"required></textarea><br>
-  <label>ps no:</label><br>
-  <input type="number" id="ps" name="ps" required> <br><br>
-  <label>Batch no:</label><br>
-  <input type="number" id="Batch" name="Batch" min="1" max="20" required> <br><br>
-  <label>Date of joining:</label><br>
-  <input type="date" id="doj" name="doj">
-  <input type="submit" value="Submit">
-  
-</form>
-
-<script>
-function validateForm() {
-var b= document.getElementById("Batch");
-if (!b.checkValidity()) {
-    document.getElementById("demo").innerHTML = b.validationMessage;
-
-  } 
-  else{
-return true;
-}
- 
-}
-</script>
+        }
+        p {
+            display: inline-flex;
+            align-items: center;
+            font-size: 100px;
+             }
+    </style>
+</head>
+    <p id="cd">5:00</p> 
+    <script>
+   const startMin = 05;
+   let time = startMin * 60;
+   const timer = document.getElementById('cd');
+  var clock = setInterval(updateTimer, 1000);
+   
+   function updateTimer()
+   {
+      const minutes = Math.floor(time/60);
+      let seconds = time % 60;
+      if(minutes==0 && seconds==0){
+                        clearInterval(clock);
+                        alert("Time Out");
+                    }
+      seconds = seconds < 10 ? '0' + seconds : seconds;
+      timer.innerHTML = minutes + ":" + seconds;
+       time--;
+       if(time<0)
+   }
+   
+    </script>
 </body>
 </html>
